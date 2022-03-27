@@ -34,7 +34,8 @@ private:
     std::vector<Sphere> spheres;
     std::vector<vec3> rotdir;
 
-    float angle;
+    std::vector<float> angles;
+    std::vector<float> speeds;
     GLint nsphereUnitLoc;
 
     void buildGUI();
@@ -42,7 +43,6 @@ private:
 };
 
 void MyRender::setupModels() {
-    angle = 0.0f;
     spheres.push_back(Sphere(0.8));
     spheres.push_back(Sphere(1));
     spheres.push_back(Sphere(1.2));
@@ -56,13 +56,25 @@ void MyRender::setupModels() {
     std::shared_ptr<Texture2D> sphere3Texture = std::make_shared<Texture2D>();
     sphere3Texture->loadImage("../recursos/imagenes/sphere3.jpg");
 
-    textures.push_back(sphere1Texture);
-    textures.push_back(sphere2Texture);
-    textures.push_back(sphere3Texture);
+    textures = {
+        sphere1Texture, 
+        sphere2Texture, 
+        sphere3Texture
+    };
 
-    rotdir.push_back(vec3(0.1, 1.0, -0.1));
-    rotdir.push_back(vec3(1.0, 0.1, -0.1));
-    rotdir.push_back(vec3(-1.0, -1.0, -0.1));
+    rotdir = {
+        vec3(0.0, 1.0, 0.0),
+        vec3(1.0, 0.0, 0.0),
+        vec3(-1.0, -1.0, 0.0)
+    };
+
+    angles = {0, 0, 0};
+
+    speeds = {
+        glm::radians(60.0f),
+        glm::radians(45.0f),
+        glm::radians(30.0f)
+    };
 }
 
 void MyRender::setup() {
@@ -97,7 +109,7 @@ void MyRender::render() {
 
     for (int i = 0; i < spheres.size(); ++i) {
         mats->setMatrix(GLMatrices::MODEL_MATRIX,
-            glm::rotate(glm::mat4(1.0f), angle, rotdir[i]));
+            glm::rotate(glm::mat4(1.0f), angles[i], rotdir[i]));
 
         textures[i]->bind(GL_TEXTURE0);
         glUniform1i(nsphereUnitLoc, i);
@@ -113,9 +125,11 @@ void MyRender::reshape(uint w, uint h) {
 }
 
 void MyRender::update(uint ms) {
-    angle += glm::radians(45.0f) * ms / 1000.0f;
-    if (angle > TWOPIf)
-        angle -= TWOPIf;
+    for (int i = 0; i < angles.size(); ++i) {
+        angles[i] += speeds[i] * ms / 1000.0f;
+        if (angles[i] > TWOPIf)
+            angles[i] -= TWOPIf;
+    }
 }
 
 void MyRender::buildGUI() {
