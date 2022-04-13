@@ -192,10 +192,7 @@ std::string App::collectLibVersions() {
 #else 
 		<< " Release"
 #endif
-#ifdef TESTING
-		<< " for Testing"
-#endif
-		<< " Revision: 2157"
+		<< " TRUNK"
 		"\n";
 
 	// Boost version

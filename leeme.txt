@@ -84,6 +84,3 @@ y después, en la consola, ejecuta:
 sudo ldconfig
 
 
- 
- 
-Revision: 2157
