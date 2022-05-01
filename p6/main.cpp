@@ -82,7 +82,7 @@ void MyRender::setup() {
 
   mats = GLMatrices::build();
   program->connectUniformBlock(mats, UBO_GL_MATRICES_BINDING_INDEX);
-  program->loadFiles("../p6/p6");
+  program->loadFiles("../p6/cut_by_cylinder");
   program->compile();
 
   // Posiciones de las variables uniform
@@ -111,8 +111,9 @@ void MyRender::render() {
   vec4 lp = viewMatrix * lightPosWCS;
   glUniform3f(lightPosLoc, lp.x, lp.y, lp.z);
 
-  // Posición de la base del cilindro en el espacio del mundo
-  glUniform3fv(cylinderPosLoc, 1, &cylinderPosWCS.x);
+  // Posición de la base del cilindro en el espacio de la cámara
+  vec3 cb = vec3(viewMatrix * vec4(cylinderPosWCS, 1));
+  glUniform3fv(cylinderPosLoc, 1, &cb.x);
 
   // Dibujando el objeto
   mats->pushMatrix(GLMatrices::MODEL_MATRIX);
