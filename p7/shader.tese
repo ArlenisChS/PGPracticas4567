@@ -27,6 +27,6 @@ void main() {
 	textureCoord = color.x;
 
 	gl_Position = mix(p1, p2, gl_TessCoord.y);
-	gl_Position.y += color.x + color.y + color.z / 3;
+	gl_Position.y += color.x * 2;
 	gl_Position = projMatrix*gl_Position;
 }
