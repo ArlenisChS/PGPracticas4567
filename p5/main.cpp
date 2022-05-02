@@ -232,7 +232,7 @@ void MyRender::render() {
 	mats->setMatrix(GLMatrices::VIEW_MATRIX, viewMatrix);
 	updateLightPosition(viewMatrix);
 
-	// Primero dibujamos los objetos con iluminación
+	// Comprobar el shader seleccionado y activarlo
 	if (shader_selector->getSelected() == 0) {
 		gouraud.use();
 	}
@@ -240,6 +240,8 @@ void MyRender::render() {
 		phong.use();
 	}
 
+	// Primero dibujamos los objetos con iluminación
+	
 	// Cono rojo
 	mats->pushMatrix(GLMatrices::MODEL_MATRIX);
 	mats->translate(GLMatrices::MODEL_MATRIX, 1.0, 0.0, -0.5);

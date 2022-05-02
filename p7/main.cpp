@@ -31,6 +31,7 @@ private:
   std::shared_ptr<GLMatrices> mats;
   Model model;
   Texture2D heightMap;
+  Texture1D scaleMap;
 };
 
 void MyRender::setup() {
@@ -39,20 +40,20 @@ void MyRender::setup() {
 
   auto m = std::make_shared<Mesh>();
   std::vector<glm::vec3> vs;
-  vs.push_back(glm::vec3(-32.0, 0.0, 32.0));
-  vs.push_back(glm::vec3(32.0, 0.0, 32.0));
-  vs.push_back(glm::vec3(32.0, 0.0, -32.0));
-  vs.push_back(glm::vec3(-32.0, 0.0, -32.0));
+  vs.push_back(glm::vec3(-0.5, 0.0, 0.5));
+  vs.push_back(glm::vec3(0.5, 0.0, 0.5));
+  vs.push_back(glm::vec3(0.5, 0.0, -0.5));
+  vs.push_back(glm::vec3(-0.5, 0.0, -0.5));
   m->addVertices(vs);
 
   std::vector<glm::vec2> tc;
-  tc.push_back(glm::vec2(0.0f, 0.0f));
   tc.push_back(glm::vec2(1.0f, 0.0f));
-  tc.push_back(glm::vec2(1.0f, 1.0f));
+  tc.push_back(glm::vec2(0.0f, 0.0f));
   tc.push_back(glm::vec2(0.0f, 1.0f));
+  tc.push_back(glm::vec2(1.0f, 1.0f));
   m->addTexCoord(0, tc);
 
-  DrawArrays *dc = new DrawArrays(GL_PATCHES, 0, 4);
+  DrawArraysInstanced* dc = new DrawArraysInstanced(GL_PATCHES, 0, 4, 64*64);
   dc->setVerticesPerPatch(4);
   m->addDrawCommand(dc);
   model.addMesh(m);
@@ -73,9 +74,19 @@ void MyRender::setup() {
   heightMap.loadImage("../recursos/imagenes/heightmap.png");
   heightMap.bind(GL_TEXTURE0);
 
+  GLint texUnitScaleMapLoc = program->getUniformLocation("texUnitScaleMap");
+  glUniform1i(texUnitScaleMapLoc, 0);
+
+  // Cargamos la nueva textura desde un fichero
+  scaleMap.loadImage("../recursos/imagenes/colorScaleHM.png");
+  scaleMap.bind(GL_TEXTURE1);
+
   auto camera = std::make_shared<WalkCameraHandler>(20.0f); // Altura inicial de la cámara
   camera->setWalkSpeed(5.0f);
   setCameraHandler(camera);
+
+  glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+  glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 }
 
 void MyRender::render() {

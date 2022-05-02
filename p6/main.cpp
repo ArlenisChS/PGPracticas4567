@@ -12,7 +12,6 @@ using glm::mat4;
 
 using std::vector;
 
-
 /*
 
 Simulando un volumen de recorte cilíndrico con un shader de geometría

@@ -46,8 +46,8 @@ vec4 iluminacion(vec3 pos, vec3 N, vec3 V) {
         // Factor de atenuacion para luz no direccional
         attenuation_factor = 1.0/max(1, kc + (kl*d) + (kq*d*d));
 
-        float maxLD = max(dot(-L, lights[i].spotDirectionEye), 0);
         // Efecto foco para luz no direccional
+        float maxLD = max(dot(-L, lights[i].spotDirectionEye), 0);
         if(lights[i].spotCutoff == 180){
             focus_effect = 1;
         }

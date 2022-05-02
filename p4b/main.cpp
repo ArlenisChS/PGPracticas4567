@@ -12,12 +12,6 @@ using glm::mat3;
 using glm::mat4;
 using std::vector;
 
-/*
-
-Muestra una esfera texturada con una foto de la Tierra.
-
-*/
-
 class MyRender : public Renderer {
 public:
     MyRender() {};
@@ -35,7 +29,7 @@ private:
     std::vector<vec3> rotdir;
 
     std::vector<float> angles;
-    std::vector<float> speeds;
+    std::vector<std::shared_ptr<FloatSliderWidget>> speeds;
     GLint nsphereUnitLoc;
 
     void buildGUI();
@@ -43,9 +37,9 @@ private:
 };
 
 void MyRender::setupModels() {
-    spheres.push_back(Sphere(0.8));
-    spheres.push_back(Sphere(1));
-    spheres.push_back(Sphere(1.2));
+    spheres.push_back(Sphere(0.8f));
+    spheres.push_back(Sphere(1.0f));
+    spheres.push_back(Sphere(1.2f));
 
     std::shared_ptr<Texture2D> sphere1Texture = std::make_shared<Texture2D>();
     sphere1Texture->loadImage("../recursos/imagenes/sphere1.jpg");
@@ -69,12 +63,6 @@ void MyRender::setupModels() {
     };
 
     angles = {0, 0, 0};
-
-    speeds = {
-        glm::radians(60.0f),
-        glm::radians(45.0f),
-        glm::radians(30.0f)
-    };
 }
 
 void MyRender::setup() {
@@ -126,7 +114,7 @@ void MyRender::reshape(uint w, uint h) {
 
 void MyRender::update(uint ms) {
     for (int i = 0; i < angles.size(); ++i) {
-        angles[i] += speeds[i] * ms / 1000.0f;
+        angles[i] += glm::radians(speeds[i]->get()) * ms / 1000.0f;
         if (angles[i] > TWOPIf)
             angles[i] -= TWOPIf;
     }
@@ -158,6 +146,29 @@ void MyRender::buildGUI() {
         program,           // El programa que contiene el uniform
         "thresh3"); // El nombre del uniform en el shader
     panel->addWidget(color3);
+
+    auto speed1 = std::make_shared<FloatSliderWidget>(
+        "Speed 1", // Etiqueta
+        60.0f, // Valor inicial
+        0.0f,  // Mínimo
+        100.0f); // Máximo
+    panel->addWidget(speed1);
+
+    auto speed2 = std::make_shared<FloatSliderWidget>(
+        "Speed 2", // Etiqueta
+        60.0f, // Valor inicial
+        0.0f,  // Mínimo
+        100.0f); // Máximo
+    panel->addWidget(speed2);
+
+    auto speed3 = std::make_shared<FloatSliderWidget>(
+        "Speed 3", // Etiqueta
+        60.0f, // Valor inicial
+        0.0f,  // Mínimo
+        100.0f); // Máximo
+    panel->addWidget(speed3);
+
+    speeds = { speed1, speed2, speed3 };
 }
 
 int main(int argc, char* argv[]) {

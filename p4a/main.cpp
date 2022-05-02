@@ -11,12 +11,6 @@ using glm::mat3;
 using glm::mat4;
 using std::vector;
 
-/*
-
-Muestra una esfera texturada con una foto de la Tierra.
-
-*/
-
 class MyRender : public Renderer {
 public:
   MyRender(){};

@@ -1,13 +1,12 @@
 #version 420 core
 
 in TESE_OUT {
-	vec2 textureCoord;
+	float textureCoord;
 };
 
-uniform	sampler2D texUnitHeightMap;
+uniform	sampler1D texUnitScaleMap;
 out vec4 finalColor;
 
-
 void main() {
-	finalColor = texture(texUnitHeightMap, textureCoord).rrra; 
+	finalColor = texture(texUnitScaleMap, textureCoord); 
 }

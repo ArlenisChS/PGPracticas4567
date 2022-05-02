@@ -4968,3 +4968,174 @@ Mat: [
 [Sun May  1 17:59:11 2022] INF: [bufferObject.cpp (19)] Buffer object 11 (GLMatrices) destruído
 [Sun May  1 17:59:11 2022] INF: [app.cpp (93)] App destroyed
 [Sun May  1 17:59:11 2022] INF: [log.cpp (46)] Closing Log
+
+[Mon May  2 12:52:39 2022] INF: [app.cpp (86)] App created
+[Mon May  2 12:52:39 2022] INF: [app.cpp (106)] Iniciando aplicación D:\Master\others\projects\pg\practPG-1-1\bin\p6d.exe
+[Mon May  2 12:52:42 2022] INF: [sdlAdapter.cpp (489)] Window Properties: DOUBLE_BUFFER 
+[Mon May  2 12:52:42 2022] INF: [sdlAdapter.cpp (491)] SDL Window flags: SDL_WINDOW_OPENGL SDL_WINDOW_SHOWN SDL_WINDOW_RESIZABLE SDL_WINDOW_INPUT_FOCUS SDL_WINDOW_MOUSE_FOCUS 
+[Mon May  2 12:52:42 2022] INF: [sdlAdapter.cpp (494)] SDL Context flags: SDL_GL_CONTEXT_DEBUG_FLAG 
+[Mon May  2 12:52:42 2022] INF: [window.cpp (128)] Ventana creada. Soporte de OpenGL: GL_VERSION_4_5
+[Mon May  2 12:52:42 2022] INF: [windowBuilder.cpp (75)] Información del driver:
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2
+GL_VERSION: 4.5.0 NVIDIA 496.49
+GL_SHADING_LANGUAGE_VERSION: 4.50 NVIDIA
+Tamaño del framebuffer por defecto:
+   bits de color: (8, 8, 8, 0), depth: 24, stencil: 0
+
+[Mon May  2 12:52:42 2022] INF: [app.cpp (161)] Library versions
+PGUPV 64 bits Debug TRUNK
+Boost: 1_69
+SDL: Runtime: 2.0.8 Compiled: 2.0.8
+Assimp: 5.0.0
+GLEW: 2.2.0
+Par Shapes: http://github.prideout.net/shapes @ August 2016
+GLI: 0.8.3
+FreeImage: 3.18.0
+ImGui: 1.82
+GLM: version 0.9.9.8
+
+[Mon May  2 12:52:42 2022] INF: [app.cpp (418)] No se han encontrado joysticks en el sistema
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 1 ha reservado 96 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 2 ha reservado 72 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 3 ha reservado 1720 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 4 ha reservado 2772 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 5 ha reservado 2772 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 6 ha reservado 1848 bytes
+[Mon May  2 12:52:42 2022] INF: [assimpWrapper.cpp (95)] El modelo ../recursos/modelos/bunny.obj no tiene animaciones
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 7 ha reservado 80 bytes
+[Mon May  2 12:52:42 2022] INF: [uboMaterial.cpp (54)] UBO Material creado
+[Mon May  2 12:52:42 2022] INF: [assimpWrapper.cpp (490)] Material: DefaultMaterial
+Amb: (0, 0, 0) Dif: (0.6, 0.6, 0.6) Esp: (0, 0, 0) Emi: (0, 0, 0) Shin: 0
+Transparent color *ignored*: (1, 1, 1)
+Shading model *ignored*: Simple Gouraud shading
+Textures:
+ TextureCount: 00000000000000000000000000000000
+[Mon May  2 12:52:42 2022] INF: [assimpWrapper.cpp (195)] Mesh #0 (defaultobject). Tris: 4968. Vtx: 2503 with normals WITHOUT tangents
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 8 ha reservado 59616 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 9 ha reservado 30036 bytes
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 10 ha reservado 30036 bytes
+[Mon May  2 12:52:42 2022] INF: [fileLoader.cpp (422)] Grafo de escena:
+Transform (bunny.obj) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 hijos 
+Mat: [
+1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1]
+  Transform (defaultobject) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 hijos 
+  Mat: [
+  1 0 0 0
+  0 1 0 0
+  0 0 1 0
+  0 0 0 1]
+    Geode (defaultobject) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 mallas { [0] 2503 vert 1 draws}
+
+[Mon May  2 12:52:42 2022] INF: [bufferObject.cpp (41)] Buffer object 11 ha reservado 368 bytes
+[Mon May  2 12:52:42 2022] INF: [glMatrices.cpp (160)] UBO GLMatrices creado
+[Mon May  2 12:52:42 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.vert
+[Mon May  2 12:52:42 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.frag
+[Mon May  2 12:52:42 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.geom
+[Mon May  2 12:52:42 2022] INF: [stockPrograms.h (36)] StockProgram creado
+[Mon May  2 12:52:42 2022] INF: [shader.cpp (169)] Compilando 
+[Mon May  2 12:52:42 2022] INF: [shader.cpp (169)] Compilando 
+[Mon May  2 12:52:42 2022] WAR: [window.cpp (619)] (!! ) GL Debug: (PERFORMANCE) Program/shader state performance warning: Vertex shader in program 7 is being recompiled based on GL state.
+[Mon May  2 12:54:53 2022] INF: [app.cpp (599)] Aplicación terminada normalmente
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 7 (Material) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 9 (Vertices) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 10 (Normales) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 8 (Indices) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 4 (Vertices) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 5 (Normales) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 3 (Indices) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 6 (Coord. de textura (0)) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 2 (Vertices) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 1 (Colores) destruído
+[Mon May  2 12:54:53 2022] INF: [bufferObject.cpp (19)] Buffer object 11 (GLMatrices) destruído
+[Mon May  2 12:54:53 2022] INF: [app.cpp (93)] App destroyed
+[Mon May  2 12:54:53 2022] INF: [log.cpp (46)] Closing Log
+
+[Mon May  2 12:55:25 2022] INF: [app.cpp (86)] App created
+[Mon May  2 12:55:25 2022] INF: [app.cpp (106)] Iniciando aplicación D:\Master\others\projects\pg\practPG-1-1\bin\p6d.exe
+[Mon May  2 12:55:28 2022] INF: [sdlAdapter.cpp (489)] Window Properties: DOUBLE_BUFFER 
+[Mon May  2 12:55:28 2022] INF: [sdlAdapter.cpp (491)] SDL Window flags: SDL_WINDOW_OPENGL SDL_WINDOW_SHOWN SDL_WINDOW_RESIZABLE SDL_WINDOW_INPUT_FOCUS 
+[Mon May  2 12:55:28 2022] INF: [sdlAdapter.cpp (494)] SDL Context flags: SDL_GL_CONTEXT_DEBUG_FLAG 
+[Mon May  2 12:55:28 2022] INF: [window.cpp (128)] Ventana creada. Soporte de OpenGL: GL_VERSION_4_5
+[Mon May  2 12:55:28 2022] INF: [windowBuilder.cpp (75)] Información del driver:
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2
+GL_VERSION: 4.5.0 NVIDIA 496.49
+GL_SHADING_LANGUAGE_VERSION: 4.50 NVIDIA
+Tamaño del framebuffer por defecto:
+   bits de color: (8, 8, 8, 0), depth: 24, stencil: 0
+
+[Mon May  2 12:55:28 2022] INF: [app.cpp (161)] Library versions
+PGUPV 64 bits Debug TRUNK
+Boost: 1_69
+SDL: Runtime: 2.0.8 Compiled: 2.0.8
+Assimp: 5.0.0
+GLEW: 2.2.0
+Par Shapes: http://github.prideout.net/shapes @ August 2016
+GLI: 0.8.3
+FreeImage: 3.18.0
+ImGui: 1.82
+GLM: version 0.9.9.8
+
+[Mon May  2 12:55:28 2022] INF: [app.cpp (418)] No se han encontrado joysticks en el sistema
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 1 ha reservado 96 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 2 ha reservado 72 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 3 ha reservado 1720 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 4 ha reservado 2772 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 5 ha reservado 2772 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 6 ha reservado 1848 bytes
+[Mon May  2 12:55:28 2022] INF: [assimpWrapper.cpp (95)] El modelo ../recursos/modelos/bunny.obj no tiene animaciones
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 7 ha reservado 80 bytes
+[Mon May  2 12:55:28 2022] INF: [uboMaterial.cpp (54)] UBO Material creado
+[Mon May  2 12:55:28 2022] INF: [assimpWrapper.cpp (490)] Material: DefaultMaterial
+Amb: (0, 0, 0) Dif: (0.6, 0.6, 0.6) Esp: (0, 0, 0) Emi: (0, 0, 0) Shin: 0
+Transparent color *ignored*: (1, 1, 1)
+Shading model *ignored*: Simple Gouraud shading
+Textures:
+ TextureCount: 00000000000000000000000000000000
+[Mon May  2 12:55:28 2022] INF: [assimpWrapper.cpp (195)] Mesh #0 (defaultobject). Tris: 4968. Vtx: 2503 with normals WITHOUT tangents
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 8 ha reservado 59616 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 9 ha reservado 30036 bytes
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 10 ha reservado 30036 bytes
+[Mon May  2 12:55:28 2022] INF: [fileLoader.cpp (422)] Grafo de escena:
+Transform (bunny.obj) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 hijos 
+Mat: [
+1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1]
+  Transform (defaultobject) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 hijos 
+  Mat: [
+  1 0 0 0
+  0 1 0 0
+  0 0 1 0
+  0 0 0 1]
+    Geode (defaultobject) BB: [-0.0943804 -> 0.0607788, 0.0333099 -> 0.186996, -0.0616792 -> 0.0587146] 1 mallas { [0] 2503 vert 1 draws}
+
+[Mon May  2 12:55:28 2022] INF: [bufferObject.cpp (41)] Buffer object 11 ha reservado 368 bytes
+[Mon May  2 12:55:28 2022] INF: [glMatrices.cpp (160)] UBO GLMatrices creado
+[Mon May  2 12:55:28 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.vert
+[Mon May  2 12:55:28 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.frag
+[Mon May  2 12:55:28 2022] INF: [shader.cpp (169)] Compilando ../p6/cut_by_cylinder.geom
+[Mon May  2 12:55:28 2022] WAR: [window.cpp (619)] (!! ) GL Debug: (PERFORMANCE) Program/shader state performance warning: Geometry shader in program 4 is being recompiled based on GL state, and was not found in the disk cache
+[Mon May  2 12:55:28 2022] INF: [stockPrograms.h (36)] StockProgram creado
+[Mon May  2 12:55:28 2022] INF: [shader.cpp (169)] Compilando 
+[Mon May  2 12:55:28 2022] INF: [shader.cpp (169)] Compilando 
+[Mon May  2 12:55:28 2022] WAR: [window.cpp (619)] (!! ) GL Debug: (PERFORMANCE) Program/shader state performance warning: Vertex shader in program 7 is being recompiled based on GL state.
+[Mon May  2 12:55:38 2022] INF: [app.cpp (599)] Aplicación terminada normalmente
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 7 (Material) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 9 (Vertices) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 10 (Normales) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 8 (Indices) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 4 (Vertices) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 5 (Normales) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 3 (Indices) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 6 (Coord. de textura (0)) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 2 (Vertices) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 1 (Colores) destruído
+[Mon May  2 12:55:38 2022] INF: [bufferObject.cpp (19)] Buffer object 11 (GLMatrices) destruído
+[Mon May  2 12:55:38 2022] INF: [app.cpp (93)] App destroyed
+[Mon May  2 12:55:38 2022] INF: [log.cpp (46)] Closing Log
